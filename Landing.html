@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mi Podcast Channel </title>
+    <link rel="stylesheet" type="text/css" href="Styles/style.css">
+    <script src="https://kit.fontawesome.com/9fc7b75551.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!---------------------------------MENUBAR CON LOGO-------------------------------------->
+    <header> 
+        <img src="Images/logo.svg" alt="logo">
+        <div class="menu"> 
+            <nav>
+                <input type="checkbox" id="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul>
+                    <li><a href="#episodio">EPISODIOS</a></li>
+                    <li><a href="#nosotros">NOSOTROS</a></li>
+                    <li><a href="#entrevistas">ENTREVISTAS</a></li>
+                    <li><a href="#topicos">TÓPICOS</a></li>
+                </ul>
+            </nav>
+        </div> 
+    </header>
+
+     <!---------------------------------SECCION 1- HELLO WORLD -------------------------------------->
+
+    <section>
+         <div class="section1"> 
+            <h1>Hello <span class="strike">world</span> pale blue dot <span class="bluedot">.</span></h1>
+            <p> El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días. </p>
+            <a class="btn" href="#nosotros"> CONOCÉ MÁS</a> 
+        </div>
+    </section>
+
+    <!---------------------------------SECCION 2 -EPISODIOS-------------------------------------->
+
+    <section  class="section2">
+        <div class="front">
+            <h2 id="episodio"> Episodios</h2>
+            <div class="episodios">
+                <iframe class="podcast" src="https://open.spotify.com/embed-podcast/show/0S1h5K7jm2YvOcM7y1ZMXY" allow="encrypted-media"></iframe>
+                <iframe class="podcast" src="https://open.spotify.com/embed-podcast/show/4kYCRYJ3yK5DQbP5tbfZby" allow="encrypted-media"></iframe>
+                <iframe class="podcast" src="https://open.spotify.com/embed-podcast/show/5JxcIaIkN8zx3Zy7yD9snv" allow="encrypted-media"></iframe>
+                <iframe class="podcast" src="https://open.spotify.com/embed-podcast/show/2Iibd5A6R7mxkCm4NwNmUn" allow="encrypted-media"></iframe>
+            </div>
+            <div id="cajazul">  </div>
+    
+        </div>
+    </section>
+
+    <!---------------------------------SECCION 3 - DE DONDE VENIMOS-------------------------------------->
+
+    <section class="section3">
+        <img src="Images/phone.png" alt="phone"/>
+        <article class="dedonde"> 
+            <h2 id="nosotros"> De Dónde venimos</h2>
+            <p> Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. <br/> <br/> Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves. </p>
+        </article>
+    </section>
+
+    <!---------------------------------SECCION 4 - GALLERY INVITADOS -------------------------------------->
+
+    <section  class="section4">
+        <h2 id="entrevistas"> Invitadas/os estelares </h2>
+        <div class="gallery"> 
+            <img src="Images/grace-hopper.png" class="invitados" alt="grace-hopper"/>
+            <img src="Images/Katie-Bouman.png" class="invitados" alt="Katie-Bouman"/>
+            <img src="Images/Margaret_Hamilton.png" class="invitados" alt="Margaret_Hamilton"/>
+            <img src="Images/ERAunivac.png" class="invitados" alt="first-computer"/>
+            <img src="Images/Operators.png" class="invitados" alt="computeroperators"/>
+            <img src="Images/susan-kare.png" class="invitados" alt="susan-kare"/>
+        </div>
+    </section>
+
+     <!---------------------------------SECCION 5 - TEMAS  -------------------------------------->
+
+    <section class="section5">
+        <h2 id="topicos" > Algunos de nuestros temas </h2>
+        <div class="temas"> 
+                <div> <img src="images/icon1.svg" alt="remote"/> <p> Trabajo remoto </p>  </div>
+                <div> <img src="images/icon2.svg" alt="programing"/> <p> Repensando la programacion</p>  </div>
+                <div> <img src="images/icon3.svg" alt="code"/> <p>  Bases de codigo</p>  </div>
+                <div> <img src="images/icon4.svg" alt="security"/> <p>  Seguridad Informatica</p>  </div>
+        </div>
+    </section>
+
+    <!--------------------------SECCION 6 - NOVEDADES CAJA AZUL CON BTN---------------------------->
+
+    <section class="section6">
+        <svg class="top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 12" preserveAspectRatio="none">
+            <polygon fill="white" points="100,0 0,12 0,0"/>
+        </svg>
+        <div class="novedades">
+            <h2>¿Querés las últimas novedades?</h2>
+            <a class="btn" href="#episodio"> ESCUCHÁ LOS EPISODIOS</a> 
+        </div>
+    </section>
+
+    <!--------------------------FOOTER - CON  ICONOS FONT AWSOME--------------------------------->
+
+   <footer>
+    <p> © 2019— Hello blue pale dot </p>
+
+    <div class="iconos"> 
+        <i class="fab fa-spotify"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-telegram"></i>
+    </div>
+
+   </footer>
+   
+</body>
+</html>

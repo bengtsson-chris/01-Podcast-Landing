@@ -1,0 +1,769 @@
+/*======================================================================================================
+VARIABLES
+=======================================================================================================*/
+
+/*GOOGLE FONTS*/
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+
+/*======================================================================================================
+BASE RULES
+=======================================================================================================*/
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+
+/*----IMPORTANT!!! SACAR BORDER ANTES DEPOY-------*/
+
+body{
+    font-family: 'IBM Plex Mono' , monospace;
+    flex-flow: wrap;
+    border: 0.5px solid orangered;
+    
+}
+
+
+/*======================================================================================================
+HEADER
+=======================================================================================================*/
+
+/* ---------ESTILO HEADER MOBILE FIRST---------- */
+
+header{
+    width:100%;
+    height: 2.75rem;
+    padding:0rem 1rem 0rem 1rem;
+    max-width: 1440px;
+}
+
+Header img{
+    float:left;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+header nav{
+    float:right;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* ---------CSS BURGER MENU CON CHECKBOX---------- */
+
+/* Transparent Checkbox*/
+
+header nav input {
+    display: block;
+    width: 1.19rem;
+    height: 1.19rem;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+}
+
+
+/* Estilos Menu Dropdown */
+
+header nav input[type="checkbox"]:checked ~ ul {
+    height: 240px;
+}
+
+header nav ul{
+    width: 100%;
+    position:absolute;
+    right: 0;
+    top:45px;
+    background-color:#0000FE;
+    overflow: hidden;
+    height:0px;    
+}
+
+header nav ul li{
+    position:relative;
+    list-style-type: none;
+    padding:1rem;
+}
+
+header nav li a{
+    position:relative;
+    padding:1em;
+    text-decoration: none;
+    color:#FFFF;
+    font-weight: 200;  
+}
+
+.menu a:hover{
+    text-decoration: line-through;
+    color:#FFFF;
+    transition-duration: 0.3s;
+}
+
+
+/* Burger Styling */
+
+header nav span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    margin-bottom: 3px;
+    position: relative;
+    background: #000;
+    z-index: 1;
+    transform-origin: 2px 0px;
+    transition: all .3s ease-in-out;
+}
+header nav span:first-child {
+    transform-origin: 0% 0%;
+}
+header nav span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+/* Burger Animacion */
+
+header nav input:checked ~ span {
+    opacity: 1;
+    transform: translateY(-1px) rotate(45deg);
+}
+header nav input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+header nav input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0.5px, 0px);
+}
+
+/* ---------AJUSTES RESPONISVE A DESKTOP---------- */
+
+@media (min-width:1007px){
+    header{
+        display:flex;
+        justify-content: space-between;
+        height: 5rem;
+        padding:0rem 6.25rem 0rem 6.25rem;
+    }
+
+    Header img{
+        width:2.25rem;
+        height:auto;
+        padding-top:1.38rem;
+        padding-bottom:1.38rem;
+    }
+
+    header nav{
+        display: inline-block;
+        padding-top:0rem;
+        padding-bottom:0rem;  
+    }
+    
+    header nav ul{
+        background: unset;
+        position:relative;
+        top:0rem;
+        right:0rem;
+        height:5rem;
+        padding-top:1.63rem;
+        padding-bottom:1.63rem;
+       
+    }
+    
+    header nav ul li{
+        display: inline-block;
+        list-style: none;
+        padding:0rem;
+        line-height:1.75rem;
+    }
+    
+    header nav li a{
+        text-decoration: none;
+        color:#000;
+        font-weight: 200; 
+    }
+
+    .menu span {
+        display:none;
+    }
+
+    .menu input {
+        display:none;
+    }
+    
+    .menu a:hover{
+        text-decoration: line-through;
+        color:#00F3BB ;
+        transition-duration: 0.3s;
+    }
+
+    .menu a:active{
+        text-decoration: line-through;
+        color:#060A24;
+        opacity:56%;
+    }
+
+}
+
+/*======================================================================================================
+MAIN
+=======================================================================================================*/
+
+
+/* --------------------------------SECCION 1: INTRODUCCION ----------------------------------------- */
+
+.section1{
+    padding-left:1rem;
+    padding-right:1rem;
+    padding-bottom:1.5rem;
+    padding-top:1.81rem;
+    max-width: 1440px;
+}
+
+.section1 h1{
+    font-family:'IBM Plex Sans', sans-serif;
+    font-weight:100;
+    Font-size:2rem;
+    color:#060A24;
+    
+}
+
+.section1 .strike{
+    text-decoration: line-through;
+    font-family:'IBM Plex Sans', sans-serif;
+}
+
+.section1 .bluedot{
+    color: #0000FE;
+    font-family:'IBM Plex Sans', sans-serif;
+}
+
+.section1 p{
+    font-weight:200;
+    Font-size:0.88rem;
+    color:#060A24;
+    line-height:1.38rem;
+    padding-top:1rem;
+    padding-bottom:2.25rem;
+}
+
+
+/* ---------estilo & animacion Botones---------- */
+
+.section1 .btn{
+    background-color:#00F3BB;
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:400;
+    Font-size:1rem;
+    text-align: center;
+    padding: 0.81rem 5.9rem;
+    border:none;
+    line-height: 1.38rem;
+    transition-duration: 0.2s;
+    text-decoration: none;
+    color:#060A24;
+}
+
+.btn:hover{
+    background: linear-gradient(to right, #00F0B8, #0000FE);
+    color:#FFFF;
+}
+
+/* ---------Ajustes Desktop---------- */
+
+@media (min-width:410px){
+    .section1 {
+    padding-bottom:1rem;
+    }
+    
+    .section1 p{
+        padding-top:0rem;
+    }
+}
+
+@media (min-width:1007px){
+
+section .section1{
+        padding-left:12.5rem;
+        padding-bottom:0.31rem;
+    }
+
+    .section1 h1{
+        Font-size:4rem;
+        color:#060A24;
+        padding-top:7.5rem;
+    }
+
+    .section1 p{
+        font-weight:200;
+        Font-size:1rem;
+        color:#060A24;
+        line-height:1.5rem;
+        max-width:39.25rem;
+        padding-right:1em;
+        
+    }
+
+    section .btn{
+        font-weight:400;
+        Font-size:1rem;
+        text-align: center;
+        padding: 1rem 3.69rem;
+        border:none;
+        transition-duration: 0.2s;
+        text-decoration: none;  
+    }
+
+}
+
+/* --------------------------------SECCION 2: EPISODIOS ----------------------------------------- */
+
+.section2{
+    padding-bottom:3rem;
+    padding-top:4rem;
+    max-width: 1440px;
+    height: 1203px;
+
+}
+
+.section2 h2{
+    padding-left:1rem;
+    padding-right:1rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight:100;
+    color:white;
+    font-size: 2.25rem;
+    line-height:2.63rem;
+    padding-bottom:1.31rem;
+}
+
+.episodios{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    padding-left:1rem;
+    padding-right:1rem;
+}
+
+.episodios iframe{
+    margin-bottom: 0.69rem;
+}
+
+.podcast{
+    width:100%;
+    height:232px;
+    border:0px;
+    background-color: transparent;
+}
+
+.section2 #cajazul{
+    height:1199px;
+    width:100%;
+    background: linear-gradient( to right, #0000A3,#0000FF);
+    transform:skewy(-5deg);
+    z-index: -1;
+    position:relative;
+    top:-1090px;
+}
+
+@media (min-width:410px){
+    .section2 #cajazul{
+        position:relative;
+        top:-1090px;
+        height:1199px;
+    
+    }
+}
+@media (min-width:567px){
+    .section2 #cajazul{
+        position:relative;
+        top:-1080px;
+        height:1199px;
+
+    }
+}
+
+@media (min-width:768px){
+    .section2{
+        height: 702px;
+    }
+    
+
+    .section2 iframe{
+        max-width: 47.5%;
+        max-height: 14.5rem;
+    }
+    .section2 #cajazul{
+        position:relative;
+        top:-600px;
+        height:700px;
+  
+    }
+}
+@media (min-width:1007px){
+    .section2{
+        height: 702px;
+    }
+
+    .section2{
+        padding-top:11.63rem;
+        padding-bottom:14.54rem;
+        height: 1042px;
+    }
+    .section2 h2{
+        padding-left:12.5rem;
+        padding-bottom:1.63rem;
+    }
+
+    .episodios{
+        padding-right:6.25rem;
+        padding-left:6.25rem;
+    }
+    
+    .section2 #cajazul{
+        position:relative;
+        top:-750px;
+        height:942px; 
+    }
+
+    .section2 iframe{
+        margin-bottom:4.5rem;
+    }
+}
+
+@media (min-width:1280px){
+    .section2 #cajazul{
+        position:relative;
+        top:-750px;
+        height:1042px;
+    }
+}
+
+/* --------------------------------SECCION 3: DE DONDE VENIMOS ----------------------------------------- */
+
+.section3{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between; 
+    align-items: center; 
+    padding-left:16px;
+    padding-right:16px;
+    padding-bottom: 0px;
+    max-width: 1440px;
+    height:943px;
+}
+
+.section3 img{
+    width: 360px;
+    height:auto;
+    position: relative;;
+    top:-95.5px;
+    left:-26px;
+}
+
+.dedonde{
+    padding-bottom: 3.38rem;
+    max-width:29rem;
+    position:relative;
+    top:-95.5px;
+}
+
+.dedonde h2{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight:100;
+    font-size:2.25rem; 
+}
+
+.dedonde p{
+    padding-top: 0.5rem;
+    font-weight:200;
+    Font-size:0.88rem;
+    color:#060A24;
+    line-height:1.38rem;
+}
+
+@media (min-width:857px){
+    .section3{
+        height:auto;
+    }
+
+
+    .dedonde{
+      padding-top:11.82rem;
+    }
+    .dedonde p{
+        padding-top:1.5rem;
+        Font-size:1rem;
+        color:#060A24;
+        line-height:1.5rem;
+    }
+    
+}
+
+@media (min-width:1280px){
+    .section3{
+        padding-left:200px;
+        padding-right:16rem;
+        padding-bottom: 24px;
+        height:auto;
+    }
+    
+    .section3 img{
+        padding-left:1px;
+        width: 457px;
+        height:auto;
+    }
+
+}
+
+/* --------------------------------SECCION 4: GALLERY INVITADOS ----------------------------------------- */
+
+.section4 {
+    max-width: 1440px;
+}
+
+.section4 .gallery{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;  
+}
+
+
+.section4 h2{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight:100;
+    font-size:36px;
+    padding-left:16px;
+    padding-right:16px;
+    padding-bottom: 14px;
+}
+
+
+.gallery img{
+    max-width: 100%;
+    height:auto;
+    max-height:243px;
+}
+
+@media (min-width:768px){
+    .gallery img{
+        max-width: 480px;
+    }
+}
+
+@media (min-width:1007px){
+    .section4 h2{
+        padding-left:200px;
+        padding-bottom: 36px;
+    }
+
+    .gallery img{
+        max-height:364px;
+    }
+}
+
+
+/* --------------------------------SECCION 5: TEMAS ----------------------------------------- */
+
+.section5{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;  
+    padding-left:16px;
+    padding-right:16px;
+    padding-bottom: 24px;
+    padding-top: 24px;
+    max-width: 1440px;
+}
+
+.section5 h2{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight:100;
+    font-size:36px;
+    padding-left:16px;
+    padding-right:16px;
+}
+
+.temas{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    width:100%;
+    padding-bottom: 24px;
+    padding-top: 24px;
+   
+}
+
+.temas div img{
+    padding-bottom: 13px;
+    padding-top: 13px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 104px;
+    width: 104px;
+   
+}
+
+.temas div{
+    padding-bottom: 24px;
+    padding-top: 24px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+
+ .temas div p{
+    width: 220px;
+    text-align:center ;
+    font-family: 'IBM Plex Sans semi bold', sans-serif;
+    Font-size:24px;
+    color:#060A24;
+    line-height:32px;
+}
+
+
+@media (min-width:1007px){
+    .section5{
+        padding-left:200px;
+        padding-right:200px;
+    }
+
+    .temas div{
+        width:220px;
+    }
+
+}
+
+
+/* --------------------------------SECCION 6: NOVEDADES ----------------------------------------- */
+
+
+.section6{
+    height:341px;
+    max-width: 1440px;
+    background: linear-gradient( to right, #0000A3,#0000FF);
+}
+
+.section6 .novedades{
+    padding-left:1rem;
+    padding-right:1rem;
+    
+}
+
+.section6 h2{ 
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size:36px;
+    font-weight:100;
+    color:white;
+    text-align:center;
+    padding-top:64px;
+    padding-bottom:36px;
+    line-height: 42px;
+}
+
+.section6 .top svg {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+  }
+
+.section6 .btn{
+    display: block;
+    background-color:#00F3BB;
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:400;
+    Font-size:16px;
+    text-align: center;
+    border:none;
+    width:100%;
+    padding-top:13px;
+    padding-bottom:13px;
+    line-height: 1.38rem;
+    transition-duration: 0.2s;
+    text-decoration: none;
+    color:#060A24;
+    max-width:345px;
+}  
+  
+.section6 .btn:hover{
+    background: linear-gradient(to right, #00F0B8, #0000FE);
+    color:#FFFF;
+}
+
+@media (min-width:1280px){
+    .section6{
+        height:518px;
+    }
+    .section6 .novedades{
+        padding-left:374px;
+        padding-right:374px;
+    }
+
+    .section6 h2{ 
+        font-size:48px;
+    }
+
+    .section6 .btn{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+
+}
+
+/* --------------------------------SECCION 7: FOOTER ----------------------------------------- */
+
+footer{
+    padding-left:1.38rem;
+    padding-right:1.38rem;
+    padding-bottom:1.94rem;
+    padding-top:1.5rem;
+    background-color:#FFFF;
+    z-index: 2;
+    max-width: 1440px;
+   
+}
+
+footer p{
+    text-align:center;
+    padding-bottom:1rem;
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:200;
+    font-size:0.88rem;
+  
+}
+
+footer div{
+    padding-left:1.43rem;
+    padding-right:1.43rem;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+@media (min-width:768px){
+    footer{
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    footer i {
+       padding-left:36px;
+       
+    }
+
+
+}
+
+
+
+
+
