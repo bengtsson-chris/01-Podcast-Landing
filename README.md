@@ -1,3 +1,4 @@
 # 01-Podcast-Landing
-Acamica Proyecto 1
+
+Proyecto Curso Desarrollo Web Full Stack - P01- Podcast Landing
 
