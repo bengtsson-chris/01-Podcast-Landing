@@ -20,12 +20,9 @@ BASE RULES
 }
 
 
-/*----IMPORTANT!!! SACAR BORDER ANTES DEPOY-------*/
-
 body{
     font-family: 'IBM Plex Mono' , monospace;
     flex-flow: wrap;
-    border: 0.5px solid orangered;
     
 }
 
@@ -748,6 +745,11 @@ footer div{
    
 }
 
+footer i{
+       text-decoration: none;
+       color:#060A24;
+}
+
 @media (min-width:768px){
     footer{
         display: flex;
@@ -757,6 +759,7 @@ footer div{
 
     footer i {
        padding-left:36px;
+       
        
     }
 
