@@ -139,7 +139,7 @@ header nav input:checked ~ span:nth-last-child(2) {
 
 /* ---------AJUSTES RESPONISVE A DESKTOP---------- */
 
-@media (min-width:1007px){
+@media (min-width:1028px){
     header{
         display:flex;
         justify-content: space-between;
@@ -282,7 +282,7 @@ MAIN
     }
 }
 
-@media (min-width:1007px){
+@media (min-width:1028px){
 
 section .section1{
         padding-left:12.5rem;
@@ -401,7 +401,7 @@ section .section1{
   
     }
 }
-@media (min-width:1007px){
+@media (min-width:1028px){
     .section2{
         height: 702px;
     }
@@ -457,7 +457,7 @@ section .section1{
 .section3 img{
     width: 360px;
     height:auto;
-    position: relative;;
+    position: relative;
     top:-95.5px;
     left:-26px;
 }
@@ -483,39 +483,59 @@ section .section1{
     line-height:1.38rem;
 }
 
-@media (min-width:857px){
-    .section3{
+@media (min-width:768px){
+    .section3 {
+        padding-left:64px;
+        padding-right:64px;
         height:auto;
     }
 
-
     .dedonde{
-      padding-top:11.82rem;
+        padding-top:11.82rem;
+        padding-bottom: 3.38rem;
+        max-width:20rem;
     }
+
     .dedonde p{
         padding-top:1.5rem;
         Font-size:1rem;
         color:#060A24;
         line-height:1.5rem;
     }
-    
+
 }
 
-@media (min-width:1280px){
+@media (min-width:1028px){
     .section3{
-        padding-left:200px;
-        padding-right:16rem;
-        padding-bottom: 24px;
+        padding-left:100px;
+        padding-right:100px;
+        padding-bottom:24px;
         height:auto;
     }
-    
+
     .section3 img{
-        padding-left:1px;
         width: 457px;
         height:auto;
+    }   
+}
+
+@media (min-width:1100px){
+    .dedonde{
+        max-width:25rem;
+    }
+}
+
+@media (min-width:1320px){
+    .section3{
+        padding-left:200px;
+        padding-right:200px;    
     }
 
+    .dedonde{
+            max-width:29rem;
+        }
 }
+
 
 /* --------------------------------SECCION 4: GALLERY INVITADOS ----------------------------------------- */
 
@@ -546,13 +566,30 @@ section .section1{
     max-height:243px;
 }
 
+@media (min-width:320px){
+    .gallery img{
+        width: 100%;
+        height:auto;
+    }
+}
+
+@media (min-width:480px){
+    .gallery img{
+        width: 50%;
+        height:auto;
+    }
+}
+
+
 @media (min-width:768px){
     .gallery img{
+        width:33.3%;
+        height:auto;
         max-width: 480px;
     }
 }
 
-@media (min-width:1007px){
+@media (min-width:1028px){
     .section4 h2{
         padding-left:200px;
         padding-bottom: 36px;
@@ -625,7 +662,7 @@ section .section1{
 }
 
 
-@media (min-width:1007px){
+@media (min-width:1028px){
     .section5{
         padding-left:200px;
         padding-right:200px;
@@ -686,7 +723,7 @@ section .section1{
     transition-duration: 0.2s;
     text-decoration: none;
     color:#060A24;
-    max-width:345px;
+   
 }  
   
 .section6 .btn:hover{
@@ -694,7 +731,7 @@ section .section1{
     color:#FFFF;
 }
 
-@media (min-width:1280px){
+@media (min-width:1028px){
     .section6{
         height:518px;
     }
@@ -710,6 +747,7 @@ section .section1{
     .section6 .btn{
         margin-left:auto;
         margin-right:auto;
+        max-width:345px;
     }
 
 
